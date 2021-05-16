@@ -8,6 +8,11 @@
     "assetBundlePatterns": [
       "**/*"
     ],
-    "icon": "./assets/img/icon.png"
+    "icon": "./assets/img/icon.png",
+    "splash": {
+      "image": "./assets/img/splash.png",
+      "resizeMode": "cover",
+      "backgroundColor": "#000"
+    } 
   }
 }
