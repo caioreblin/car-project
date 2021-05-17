@@ -1,24 +1,26 @@
 import React from 'react';
-import { Image, StyleSheet, Text, TouchableOpacity, View } from 'react-native';
+import { Button, Text, View } from 'react-native';
 import Info from './views/info';
+import {css} from './assets/css/css';
+import { useState, useEffect } from 'react';
 
 export default function App() {
+  const [name,setName]=useState('Nome');
+
+  useEffect(() =>{
+    setName('Nome 2')
+  });
+
   const props_info = {
     appName: 'Astra App',
     devName: 'Reblin'
   };
+
   return (
-    <View style={styles.container}>
+    <View style={css.container}>
+      <Button title="adicionar quantidade"></Button>
+      <Text>{name}</Text>
       <Info {...props_info} ></Info>
     </View>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  }
-});
